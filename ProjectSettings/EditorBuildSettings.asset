@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenes/LoadingTwo.unity
     guid: 289da65e1d731cc42b8f6173f659151e
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CasualOne.unity
+    guid: c6a7075f344762e48aa6d88c4ea02d02
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CasualTwo.unity
+    guid: 880d4fb568ceaf746b236a42d14b901f
   m_configObjects: {}

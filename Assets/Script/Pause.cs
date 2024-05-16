@@ -56,6 +56,43 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f; // Set ke nilai normal (1.0f)
     }
 
+    public void restartLevelThree()
+    {
+        // Simpan nilai Time.timeScale saat ini
+        originalTimeScale = Time.timeScale;
+
+        // Load ulang level
+        SceneManager.LoadScene("LevelThree");
+
+        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
+        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
+    }
+
+    public void restartCasualOne()
+    {
+        // Simpan nilai Time.timeScale saat ini
+        originalTimeScale = Time.timeScale;
+
+        // Load ulang level
+        SceneManager.LoadScene("CasualOne");
+
+        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
+        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
+    }
+
+    public void restartCasualTwo()
+    {
+        // Simpan nilai Time.timeScale saat ini
+        originalTimeScale = Time.timeScale;
+
+        // Load ulang level
+        SceneManager.LoadScene("CasualTwo");
+
+        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
+        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
+    }
+
+
     public void Continue()
     {
         Time.timeScale = 1;

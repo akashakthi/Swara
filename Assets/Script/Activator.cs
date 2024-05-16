@@ -12,11 +12,18 @@ public class Activator : MonoBehaviour
     int totalGood = 0;
     int totalBad = 0;
 
+    
     public GameObject skoreA;
     public GameObject skoreB;
     public GameObject skoreC;
     public GameObject skoreD;
     public GameObject skoreE;
+    public GameObject hoekObject;
+    public GameObject bintangObject;
+    public GameObject loveObject;
+    private int hoekCount = 0;
+    private int bintangCount = 0;
+    private int loveCount = 0;
 
     SpriteRenderer sr;
     bool active = false;
@@ -147,7 +154,7 @@ public class Activator : MonoBehaviour
             float relativePosition = Mathf.Abs(transform.position.y - col.transform.position.y) / (GetComponent<BoxCollider2D>().size.y / 2);
 
             // Menentukan nilai skor berdasarkan persentase posisi kolisi
-            int scoreToAdd = 0;                                                                                                                                                                                                 
+            int scoreToAdd = 0;
             string feedbackText = "";
 
             if (relativePosition >= 0.81f)
@@ -156,6 +163,12 @@ public class Activator : MonoBehaviour
                 feedbackText = "Perfect!";
                 StartCoroutine(ActivateObject(perfectObject));
                 totalPerfect++; // Menambah total perfect
+                loveCount++; // Menghitung jumlah kondisi perfect
+                
+                if (loveCount >= 10)
+                {
+                    StartCoroutine(ActivateObject(loveObject));
+                }
             }
             else if (relativePosition >= 0.66f)
             {
@@ -163,6 +176,11 @@ public class Activator : MonoBehaviour
                 feedbackText = "Good!";
                 StartCoroutine(ActivateObject(goodObject));
                 totalGood++; // Menambah total good
+                loveCount++;
+                if (loveCount >= 5)
+                {
+                    StartCoroutine(ActivateObject(bintangObject));
+                }
             }
             else
             {
@@ -170,6 +188,11 @@ public class Activator : MonoBehaviour
                 feedbackText = "Bad!";
                 StartCoroutine(ActivateObject(badObject));
                 totalBad++; // Menambah total bad
+                hoekCount++; // Menghitung jumlah kondisi bad
+                if (hoekCount <= 3)
+                {
+                    StartCoroutine(ActivateObject(hoekObject));
+                }
             }
 
             AddScore(scoreToAdd);
@@ -177,12 +200,23 @@ public class Activator : MonoBehaviour
             Destroy(col.gameObject);
             Instantiate(Efek, transform.position, Quaternion.identity);
             // Panggil fungsi untuk menggetarkan kamera
-            cameraShake.ShakeCamera(shakeDuration, shakeMagnitude); 
-                                                                   
+            cameraShake.ShakeCamera(shakeDuration, shakeMagnitude);
+
             // Menampilkan feedback
             Debug.Log(feedbackText);
         }
     }
+
+    private IEnumerator ActivateObject(GameObject obj, bool deactivateAfterDelay = false)
+    {
+        obj.SetActive(true);
+        if (deactivateAfterDelay)
+        {
+            yield return new WaitForSeconds(0.5f);
+            obj.SetActive(false);
+        }
+    }
+
     void ShowTotal()
     {
         totalText.text = "" + totalPerfect + "\n" +
