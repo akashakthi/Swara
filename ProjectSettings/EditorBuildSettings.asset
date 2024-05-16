@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scenes/SplashScreen.unity
+    guid: 0c1eaa78aa76a194281424c1e76e05d4
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualOne.unity
+    guid: 057b0b5f62e74ae448a2cef6efdc28e9
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualTwo.unity
+    guid: ac177fe038fe4874dbb063b84e01dc61
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualThree.unity
+    guid: 5c9114578426ba54f8cbf664280810e7
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LevelOne.unity
+    guid: 62776c981b602ea42b7670921e34d787
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LevelTwo.unity
+    guid: 5f6b6f5b50354d5499fe15d52078d251
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LevelThree.unity
+    guid: 0de3d1711684d7f4d882032ade071310
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Help.unity
+    guid: 98a527e6b4614c64b9cbe3d14c4dca69
+  - enabled: 1
+    path: Assets/Scenes/Scenes/MainMenu.unity
+    guid: e99e3c7e6b44e7241b2b9edc194d187d
+  - enabled: 1
+    path: Assets/Scenes/Scenes/SelectMode.unity
+    guid: 3aa8c55d533853f498f3e7346f56016c
+  - enabled: 1
+    path: Assets/Scenes/Scenes/SelectStory.unity
+    guid: 11f6c90d858350644958676ee5097ab2
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Options.unity
+    guid: cc3ac738704285c48a3501b34eb6c29f
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Credit.unity
+    guid: f7cb3dc06458ec8409eedb665d266a76
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CasualModeSelect.unity
+    guid: cc34065abfe0f414e9e56fc50e0d367a
+  - enabled: 1
+    path: Assets/Scenes/Scenes/SelectSong.unity
+    guid: 02390d3425996854eb2fd3c4789c5993
+  - enabled: 1
+    path: Assets/Scenes/Scenes/StoryOne.unity
+    guid: 7a16b15c8bd10854dafca48c69dd66e9
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingOne.unity
+    guid: 466765fa257aafe41be124ab497397a4
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingThree.unity
+    guid: 7f230cb44d267f44abccc2a41f822a8c
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingTwo.unity
+    guid: 289da65e1d731cc42b8f6173f659151e
+  m_configObjects: {}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4318a1b3a651f7049b1f9fad3ee18e31, type: 3}
+  m_Name: AdriOne 3
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: 'dia adalah gadis berambut Panjang dan berkacamata, oh iya dia juga seorang
+      penyuka musik, aku pernah sekali melihat profil social media dia, dia sering
+      memposting berbagai hal tentang musik, Namanya maya, dia berasal kelas akuntansi
+      2. '
+    speaker: {fileID: 11400000, guid: 38e5f3b77846b1b43a658c304cd0febb, type: 2}
+  background: {fileID: 21300000, guid: 84bd846bf940d594ba274a8f1dd58bc9, type: 3}
+  nextScene: {fileID: 11400000, guid: 81fce4762b8b4d04196cafe3d2a969a8, type: 2}
