@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SelectStory : MonoBehaviour
 {
+    public GameObject gamemanager;
     public void StoryOne()
     {
         SceneManager.LoadScene("VisualOne"); // Pindah ke Scene SelectMode
@@ -24,5 +25,10 @@ public class SelectStory : MonoBehaviour
     public void BackBtn()
     {
         SceneManager.LoadScene("SelectMode"); // Pindah ke Scene SelectMode
+    }
+
+    public void Start()
+    {
+        gamemanager.SetActive(true);
     }
 }

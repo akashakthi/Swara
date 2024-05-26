@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4318a1b3a651f7049b1f9fad3ee18e31, type: 3}
+  m_Name: VisualThreeEndHappy 8
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: 'oh iya aku juga pengen bilang makasih ke kamu karena udah bantu aku di
+      pertunjukan kita yang terakhir ini. '
+    speaker: {fileID: 11400000, guid: 38e5f3b77846b1b43a658c304cd0febb, type: 2}
+  - text: 'maka dari itu sebelu kita berpisah aku ingin bilang terimakasih dan juga
+      aku berharap kita bisa main bareng-bareng lagi. '
+    speaker: {fileID: 11400000, guid: 38e5f3b77846b1b43a658c304cd0febb, type: 2}
+  - text: makasih ya sudah main bareng
+    speaker: {fileID: 11400000, guid: 38e5f3b77846b1b43a658c304cd0febb, type: 2}
+  background: {fileID: 21300000, guid: e9febbde975876c43938613bd20110a4, type: 3}
+  nextScene: {fileID: 11400000, guid: 7d4df035007d0b04daa278929e7788a4, type: 2}

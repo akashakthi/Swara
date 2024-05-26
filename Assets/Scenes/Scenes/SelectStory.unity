@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e66d3e0338fec4f9aa11f955210268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamemanager: {fileID: 0}
 --- !u!114 &8141189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +369,7 @@ GameObject:
   - component: {fileID: 189698047}
   - component: {fileID: 189698046}
   - component: {fileID: 189698045}
+  - component: {fileID: 189698049}
   m_Layer: 5
   m_Name: Story2
   m_TagString: Untagged
@@ -458,7 +460,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -468,7 +470,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: faaa81673810bb549a19f07e87764f69, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: fd9587499d1356d438404cc012ecfafa, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -515,7 +517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6aad597954c2f294e9b7c6188e0c1793, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd9587499d1356d438404cc012ecfafa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -533,6 +535,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189698043}
   m_CullTransparentMesh: 1
+--- !u!95 &189698049
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189698043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f97e66f8fef6ad44852d070f50d5ea9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &502852324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1902310972916008800, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
+  m_PrefabInstance: {fileID: 1141887360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &758682354
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +571,6 @@ GameObject:
   m_Component:
   - component: {fileID: 758682356}
   - component: {fileID: 758682355}
-  - component: {fileID: 758682357}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -558,7 +585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758682354}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afea6ea1430e77448a59966f5c7677c1, type: 3}
   m_Name: 
@@ -582,22 +609,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &758682357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758682354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1757a86a55ce3d4fa7cbc1f669bc50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 1140939122}
-  - {fileID: 189698046}
-  - {fileID: 1228663502}
 --- !u!1 &1014640109
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +711,7 @@ GameObject:
   - component: {fileID: 1140939123}
   - component: {fileID: 1140939122}
   - component: {fileID: 1140939125}
+  - component: {fileID: 1140939126}
   m_Layer: 5
   m_Name: Story1
   m_TagString: Untagged
@@ -745,7 +757,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -865,6 +877,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!95 &1140939126
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140939120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ca5e28b2dd43ef4a90df66a503fbf36, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1141887360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -873,6 +906,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8141187}
     m_Modifications:
+    - target: {fileID: 366523189197434093, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 366523189197434093, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1040,13 +1077,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1902310972916008800, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1141887365}
+    - targetCorrespondingSourceObject: {fileID: 1902310972916008800, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1141887366}
   m_SourcePrefab: {fileID: 100100000, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
 --- !u!224 &1141887361 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4502216481498155294, guid: d4dd1d9f3b589bd4887272c49a77798c, type: 3}
   m_PrefabInstance: {fileID: 1141887360}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1141887365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502852324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8141189}
+          m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8141189}
+          m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
+          m_MethodName: PressedSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!95 &1141887366
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502852324}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f54c0d3126a40914ebc137c9d5c01a3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1154335705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1329,7 @@ GameObject:
   - component: {fileID: 1228663503}
   - component: {fileID: 1228663502}
   - component: {fileID: 1228663501}
+  - component: {fileID: 1228663505}
   m_Layer: 5
   m_Name: Story3
   m_TagString: Untagged
@@ -1310,7 +1420,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1320,7 +1430,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: faaa81673810bb549a19f07e87764f69, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 6aadcf3384677ee4786a28bfd804ad16, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1367,7 +1477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6aad597954c2f294e9b7c6188e0c1793, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6aadcf3384677ee4786a28bfd804ad16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1385,6 +1495,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228663499}
   m_CullTransparentMesh: 1
+--- !u!95 &1228663505
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228663499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73bfea07a01c718448c6a73332e189f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -7,8 +7,8 @@ public class BgVnController : MonoBehaviour
 {
 
     public bool isSwitched = false;
-    public Image bgVn;
     public Image bgAdri;
+    public Image bgMaya;
     // Start is called before the first frame update
    public void SwictchImage(Sprite sprite)
     {
@@ -18,7 +18,7 @@ public class BgVnController : MonoBehaviour
         }
         else
         {
-            bgVn.sprite = sprite;
+            bgMaya.sprite = sprite;
         }
         isSwitched = !isSwitched;
     }
@@ -26,7 +26,7 @@ public class BgVnController : MonoBehaviour
     {
         if (!isSwitched)
         {
-            bgVn.sprite = sprite;
+            bgMaya.sprite = sprite;
         }
         else
         {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class NyawaManager : MonoBehaviour
 {
@@ -9,17 +10,31 @@ public class NyawaManager : MonoBehaviour
     public GameObject gameOverScreen; // Game object yang merepresentasikan layar game over
     public AudioSource audioSource; // Komponen AudioSource untuk audio permainan
     private bool gameOver = false; // Penanda apakah game over telah terjadi
+    private CanvasGroup canvasGroup; // Komponen CanvasGroup untuk mengatur transparansi
+    public GameObject bgWin;
+    public GameObject bgLose;
+    public GameObject WinButton;
+    public GameObject LoseButton;
 
     void Start()
     {
         nyawaSaatIni = nyawaAwal;
         Debug.Log("Nyawa Awal: " + nyawaSaatIni);
         UpdateUI();
+
+        // Tambahkan komponen CanvasGroup ke gameOverScreen jika belum ada
+        canvasGroup = gameOverScreen.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = gameOverScreen.AddComponent<CanvasGroup>();
+        }
+        canvasGroup.alpha = 0; // Mulai dengan alpha 0 (transparan)
+        gameOverScreen.SetActive(false); // Pastikan gameOverScreen tidak aktif pada awalnya
     }
 
     public void KurangiNyawa(int jumlah)
     {
-         if (!gameOver)
+        if (!gameOver)
         {
             nyawaSaatIni -= jumlah;
             if (nyawaSaatIni == 0)
@@ -28,17 +43,24 @@ public class NyawaManager : MonoBehaviour
                 gameOver = true;
                 // Menonaktifkan audio saat game over
                 audioSource.Stop();
-                // Mengaktifkan game object GameOver
+                // Mengaktifkan game object GameOver dan mulai fade-in
                 gameOverScreen.SetActive(true);
+                StartCoroutine(FadeInGameOverScreen());
                 // Tambahkan logika lain yang Anda inginkan saat game over
                 Time.timeScale = 0;
+
+                bgWin.SetActive(false);
+                WinButton.SetActive(false);
+
+                bgLose.SetActive(true);
+                LoseButton.SetActive(true);
             }
             else
             {
                 Debug.Log("Nyawa Tersisa: " + nyawaSaatIni);
             }
             UpdateUI();
-        } 
+        }
     }
 
     void UpdateUI()
@@ -52,18 +74,16 @@ public class NyawaManager : MonoBehaviour
         }
     }
 
-    /*private void Update()
+    IEnumerator FadeInGameOverScreen()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        float duration = 1.0f; // Durasi fade-in dalam detik
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
         {
-            Debug.Log("Game Over");
-            gameOver = true;
-            // Menonaktifkan audio saat game over
-            audioSource.Stop();
-            // Mengaktifkan game object GameOver
-            gameOverScreen.SetActive(true);
-           
+            elapsedTime += Time.unscaledDeltaTime; // Menggunakan Time.unscaledDeltaTime agar tidak terpengaruh oleh Time.timeScale
+            canvasGroup.alpha = Mathf.Clamp01(elapsedTime / duration);
+            yield return null;
         }
     }
-    */
 }

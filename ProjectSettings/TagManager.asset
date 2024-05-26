@@ -10,6 +10,7 @@ TagManager:
   - Nyawa
   - NyawaManager
   - Kotak
+  - win
   layers:
   - Default
   - TransparentFX

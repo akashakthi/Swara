@@ -5,18 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class PressAnyButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource audioSource; // Referensi ke AudioSource
+    public float fadeDuration = 1.0f; // Durasi fade dalam detik
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene("mainmenu");
+            StartCoroutine(FadeOutAndLoadScene("mainmenu"));
         }
+    }
+
+    IEnumerator FadeOutAndLoadScene(string sceneName)
+    {
+        float startVolume = audioSource.volume;
+
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        {
+            audioSource.volume = Mathf.Lerp(startVolume, 0, t / fadeDuration);
+            yield return null;
+        }
+
+        audioSource.volume = 0;
+        SceneManager.LoadScene(sceneName);
     }
 }

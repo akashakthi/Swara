@@ -47,10 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenes/CasualModeSelect.unity
     guid: cc34065abfe0f414e9e56fc50e0d367a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scenes/SelectSong.unity
     guid: 02390d3425996854eb2fd3c4789c5993
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scenes/StoryOne.unity
     guid: 7a16b15c8bd10854dafca48c69dd66e9
   - enabled: 1
@@ -68,4 +68,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenes/CasualTwo.unity
     guid: 880d4fb568ceaf746b236a42d14b901f
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingCasualOne.unity
+    guid: a1b51f1ef47f37b42a89ab1874299513
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingCasualTwo.unity
+    guid: 1adda7d154ac99d4eaefc01551c74bc1
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingCasualThree.unity
+    guid: 3747b8c8b6c9125439955d1461330df7
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingCasualFour.unity
+    guid: ca2b9ef01ede1fc4eba7c3c7fdb25f2a
+  - enabled: 1
+    path: Assets/Scenes/Scenes/LoadingCasualFive.unity
+    guid: 2169ed92e17b1c84fb16b358336aad04
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualThreeEndSad.unity
+    guid: 4c4ffb2fdcdfb9c43b7085455bee03e3
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualThreeEndHappy.unity
+    guid: adb39e1bd84ae7146abed5109e7170f7
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualTwoEnd.unity
+    guid: 9bc66d61908c22d48a4a453e832b213a
+  - enabled: 1
+    path: Assets/Scenes/Scenes/VisualOneEnd.unity
+    guid: f7a36dfdc92660345bcf457de5e2a4d4
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CasualThree.unity
+    guid: d5a790b170d400a41bbd5222f71ff80c
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CasualFour.unity
+    guid: ec848c38f6c7de647b53601c9f9d3d9c
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CasualFive.unity
+    guid: 7a643fc447a99dd42997aa7b21cf9533
   m_configObjects: {}

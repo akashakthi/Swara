@@ -72,6 +72,19 @@ public class VisualNovelController : MonoBehaviour
             case "VisualThree":
                 loadingSceneName = "LoadingThree";
                 break;
+            case "VisualOneEnd":
+                loadingSceneName = "SelectStory";
+                break;
+            case "VisualTwoEnd":
+                loadingSceneName = "SelectStory";
+                break;
+            case "VisualThreeEndHappy":
+                loadingSceneName = "MainMenu";
+                break;
+            case "VisualThreeEndSad":
+                loadingSceneName = "LoadingThree";
+                break;
+
             // Add more cases as needed for additional scenes
             default:
                 // If the current scene is not one of the specified scenes, just load the default loading scene
@@ -80,16 +93,8 @@ public class VisualNovelController : MonoBehaviour
         }
 
         SceneManager.LoadScene(loadingSceneName);
-        UnlockedNewLevel();
+  
     }
 
-    void UnlockedNewLevel()
-    {
-        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
-        {
-            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
-            PlayerPrefs.Save();
-        }
-    }
+    
 }

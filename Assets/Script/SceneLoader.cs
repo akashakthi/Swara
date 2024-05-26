@@ -22,6 +22,25 @@ public class SceneLoader : MonoBehaviour
             case "LoadingThree":
                 targetSceneName = "LevelThree";
                 break;
+            case "LoadingCasualOne":
+                targetSceneName = "CasualOne";
+                break;
+            case "LoadingCasualTwo":
+                targetSceneName = "CasualTwo";
+                break;
+            case "LoadingCasualThree":
+                targetSceneName = "CasualThree";
+                break;
+            case "LoadingCasualFour":
+                targetSceneName = "CasualFour";
+                break;
+            case "LoadingCasualFive":
+                targetSceneName = "CasualFive";
+                break;
+
+
+
+
             // Tambahkan case lain jika diperlukan untuk scene lainnya
             default:
                 Debug.LogError("Scene not recognized!");

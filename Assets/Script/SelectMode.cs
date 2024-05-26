@@ -12,7 +12,7 @@ public class SelectMode : MonoBehaviour
 
     public void CasualMode()
     {
-        SceneManager.LoadScene("LevelOne"); // Pindah ke Scene SelectMode
+        SceneManager.LoadScene("CasualModeSelect"); // Pindah ke Scene SelectMode
     }
 
     public void BackMainMenuy()

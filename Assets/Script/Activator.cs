@@ -66,6 +66,43 @@ public class Activator : MonoBehaviour
             // Panggil ScoreLevelOne hanya jika berada di scene "LevelOne"
             ScoreLevelOne(GetCurrentScore());
         }
+        else if (SceneManager.GetActiveScene().name == "LeveTwo")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "LevelTwo"
+            ScoreLevelTwo(GetCurrentScore());
+        }
+        else if (SceneManager.GetActiveScene().name == "LeveThree")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "LevelThree"
+            ScoreLevelThree(GetCurrentScore());
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualOne")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "CasualOne"
+            ScoreCasualOne(GetCurrentScore());
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualTwo")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "CasualTwo"
+            ScoreCasualTwo(GetCurrentScore());
+        }
+
+        else if (SceneManager.GetActiveScene().name == "CasualThree")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "CasualThree"
+            ScoreCasualThree(GetCurrentScore());
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualFour")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "CasualFour"
+            ScoreCasualFour(GetCurrentScore());
+        }
+
+        else if (SceneManager.GetActiveScene().name == "CasualFive")
+        {
+            // Panggil ScoreLevelTwo hanya jika berada di scene "CasualFive"
+            ScoreCasualFive(GetCurrentScore());
+        }
     }
 
     void Update()
@@ -254,12 +291,168 @@ public class Activator : MonoBehaviour
         {
             // Panggil ScoreLevelOne hanya jika berada di scene "LevelOne"
             ScoreLevelOne(currentScore);
+        } 
+        else if (SceneManager.GetActiveScene().name == "LevelTwo")
+        {
+            ScoreLevelTwo(currentScore);
+        }
+        else if (SceneManager.GetActiveScene().name == "LevelThree")
+        {
+            ScoreLevelThree(currentScore);
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualOne")
+        {
+            ScoreCasualOne(currentScore);
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualTwo")
+        {
+            ScoreCasualTwo(currentScore);
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualThree")
+        {
+            ScoreCasualThree(currentScore);
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualFour")
+        {
+            ScoreCasualFour(currentScore);
+        }
+        else if (SceneManager.GetActiveScene().name == "CasualFive")
+        {
+            ScoreCasualFive(currentScore);
         }
     }
 
     public void ScoreLevelOne(int currentScore)
     {// Periksa apakah scene saat ini adalah "LevelOne"
         if (SceneManager.GetActiveScene().name == "LevelOne")
+        {
+            Debug.Log("Current Score: " + currentScore);
+
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 1827)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 1624)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 1421)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 1218)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+    }
+
+    public void ScoreLevelTwo(int currentScore)
+    {// Periksa apakah scene saat ini adalah "LevelTwo"
+        if (SceneManager.GetActiveScene().name == "LevelTwo")
+        {
+            Debug.Log("Current Score: " + currentScore);
+
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 1.764)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 1568)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 1372)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 1176)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+
+
+    }
+
+    public void ScoreLevelThree(int currentScore)
+    {// Periksa apakah scene saat ini adalah "LevelThree"
+        if (SceneManager.GetActiveScene().name == "LevelThree")
+        {
+            Debug.Log("Current Score: " + currentScore);
+
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 3.690)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 3280)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 2870)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 2460)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+
+
+    }
+
+
+    public void ScoreCasualOne(int currentScore)
+    {// Periksa apakah scene saat ini adalah "CasualOne"
+        if (SceneManager.GetActiveScene().name == "CasualOne")
+        {
+            Debug.Log("Current Score: " + currentScore);
+
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 2358)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 2096)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 1834)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 1572)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+
+
+    }
+
+
+    public void ScoreCasualTwo(int currentScore)
+    {// Periksa apakah scene saat ini adalah "CasualTwo"
+        if (SceneManager.GetActiveScene().name == "CasualTwo")
         {
             Debug.Log("Current Score: " + currentScore);
 
@@ -285,8 +478,96 @@ public class Activator : MonoBehaviour
                 SetGameObjectActive(skoreE);
             }
         }
+
     }
 
+    public void ScoreCasualThree(int currentScore)
+    {// Periksa apakah scene saat ini adalah "CasualThree"
+        if (SceneManager.GetActiveScene().name == "CasualThree")
+        {
+            Debug.Log("Current Score: " + currentScore);
+
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 3.690)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 3280)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 2870)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 2460)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+    }
+
+    public void ScoreCasualFour(int currentScore)
+    {// Periksa apakah scene saat ini adalah "CasualFour"
+        if (SceneManager.GetActiveScene().name == "CasualFour")
+        {
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 1.764)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 1568)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 1372)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 1176)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+    }
+
+    public void ScoreCasualFive(int currentScore)
+    {// Periksa apakah scene saat ini adalah "CasualFive"
+        if (SceneManager.GetActiveScene().name == "CasualFive")
+        {
+            Debug.Log("Current Score: " + currentScore);
+
+            // Mengatur aktivasi game object berdasarkan rentang nilai skor
+            if (currentScore >= 1827)
+            {
+                SetGameObjectActive(skoreA);
+            }
+            else if (currentScore >= 1624)
+            {
+                SetGameObjectActive(skoreB);
+            }
+            else if (currentScore >= 1421)
+            {
+                SetGameObjectActive(skoreC);
+            }
+            else if (currentScore >= 1218)
+            {
+                SetGameObjectActive(skoreD);
+            }
+            else
+            {
+                SetGameObjectActive(skoreE);
+            }
+        }
+    }
     // Fungsi untuk mengatur aktivasi game object
     private void SetGameObjectActive(GameObject gameObjectToActivate)
     {

@@ -32,65 +32,47 @@ public class Pause : MonoBehaviour
         // Setelah level dimuat ulang, normalkan kembali Time.timeScale
         Time.timeScale = 1f; // Set ke nilai normal (1.0f)
     }
+    
+
     public void restart()
     {
-        // Simpan nilai Time.timeScale saat ini
-        originalTimeScale = Time.timeScale;
+    
+            // Simpan nilai Time.timeScale saat ini
+            originalTimeScale = Time.timeScale;
 
-        // Load ulang level
-        SceneManager.LoadScene("LevelOne");
+            // Dapatkan nama scene yang sedang aktif
+            string currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
-        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
-    }
+            // Tentukan scene yang akan dimuat ulang berdasarkan nama scene saat ini
+            if (currentSceneName == "LevelOne")
+            {
+                SceneManager.LoadScene("LevelOne");
+            }
+            else if (currentSceneName == "LevelTwo")
+            {
+                SceneManager.LoadScene("LevelTwo");
+            }
+            else if (currentSceneName == "LevelThree")
+            {
+                SceneManager.LoadScene("LevelThree");
+            }
+            else if (currentSceneName == "CasualOne")
+            {
+                SceneManager.LoadScene("CasualOne");
+            }
+            else if (currentSceneName == "CasualTwo")
+            {
+                SceneManager.LoadScene("CasualTwo");
+            }
+            else
+            {
+                Debug.LogWarning("Scene tidak dikenali, tidak ada tindakan yang diambil.");
+            }
 
-    public void restartLevelTwo()
-    {
-        // Simpan nilai Time.timeScale saat ini
-        originalTimeScale = Time.timeScale;
-
-        // Load ulang level
-        SceneManager.LoadScene("LevelTwo");
-
-        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
-        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
-    }
-
-    public void restartLevelThree()
-    {
-        // Simpan nilai Time.timeScale saat ini
-        originalTimeScale = Time.timeScale;
-
-        // Load ulang level
-        SceneManager.LoadScene("LevelThree");
-
-        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
-        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
-    }
-
-    public void restartCasualOne()
-    {
-        // Simpan nilai Time.timeScale saat ini
-        originalTimeScale = Time.timeScale;
-
-        // Load ulang level
-        SceneManager.LoadScene("CasualOne");
-
-        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
-        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
-    }
-
-    public void restartCasualTwo()
-    {
-        // Simpan nilai Time.timeScale saat ini
-        originalTimeScale = Time.timeScale;
-
-        // Load ulang level
-        SceneManager.LoadScene("CasualTwo");
-
-        // Setelah level dimuat ulang, normalkan kembali Time.timeScale
-        Time.timeScale = 1f; // Set ke nilai normal (1.0f)
-    }
+            // Setelah level dimuat ulang, normalkan kembali Time.timeScale
+            Time.timeScale = 1f; // Set ke nilai normal (1.0f)
+        } 
+   
 
 
     public void Continue()

@@ -33,9 +33,11 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Memeriksa jika scene yang dimuat bukan "LevelOne"
-        if (scene.name != "VisualOne"  && scene.name != "LoadingOne" && scene.name != "LevelOne" 
-            && scene.name != "LoadingTwo" && scene.name != "VisualTwo" && scene.name != "LevelTwo"
-            && scene.name != "LoadingThree" && scene.name != "VisualThree" && scene.name != "LevelThree")
+        if (scene.name != "VisualOne"  && scene.name != "LoadingOne" && scene.name != "LevelOne" && scene.name != "VisualOneEnd" 
+            && scene.name != "LoadingTwo" && scene.name != "VisualTwo" && scene.name != "LevelTwo" && scene.name != "VisualTwoEnd" 
+            && scene.name != "LoadingThree" && scene.name != "VisualThree" && scene.name != "LevelThree" && scene.name != "VisualThreeEndSad" && scene.name != "VisualThreeEndHappy"
+            && scene.name != "LoadingCasualOne" && scene.name != "LoadingCasualTwo" && scene.name != "LoadingCasualThree" && scene.name != "LoadingCasualFour"
+            && scene.name != "LoadingCasualFive" && scene.name != "CasualOne" && scene.name != "CasualTwo" && scene.name != "CasualThree"&& scene.name != "CasualFour" && scene.name != "CasualFive")
         {
             // Memeriksa apakah musik diaktifkan dan tidak sedang diputar
             if (isMusicEnabled && audioSource != null && !audioSource.isPlaying)

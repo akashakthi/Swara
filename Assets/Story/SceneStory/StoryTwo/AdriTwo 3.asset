@@ -15,5 +15,5 @@ MonoBehaviour:
   sentences:
   - text: ngomong-ngomong kenapa aku ga ngelihat ada si Maya tadi ya?
     speaker: {fileID: 11400000, guid: 38e5f3b77846b1b43a658c304cd0febb, type: 2}
-  background: {fileID: 21300000, guid: 84bd846bf940d594ba274a8f1dd58bc9, type: 3}
+  background: {fileID: 21300000, guid: 6cb5040de3fe17a4badfaa78f89bcbf9, type: 3}
   nextScene: {fileID: 11400000, guid: c1fb2ee84dda6ff4eabf6bffff67858e, type: 2}
